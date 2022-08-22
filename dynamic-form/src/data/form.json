@@ -1,0 +1,179 @@
+{
+  "login": {
+    "label": "Login",
+    "subtitle": "This is a login form. Please enter your information.",
+    "items": [
+      {
+        "label": "Email Address",
+        "data-buildertype": "text",
+        "required": true
+      },
+      {
+        "label": "Password",
+        "data-buildertype": "text",
+        "required": true
+      },
+      {
+        "label": "Create account",
+        "data-buildertype": "link",
+        "to": "/register",
+        "required": true
+      },
+      {
+        "label": "Login",
+        "data-buildertype": "button",
+        "required": true
+      }
+    ]
+  },
+  "register": {
+    "label": "Register",
+    "subtitle": "This is a registration form. Please enter your information.",
+    "items": [
+      {
+        "label": "First Name",
+        "data-buildertype": "text",
+        "required": true
+      },
+      {
+        "label": "Last Name",
+        "data-buildertype": "text",
+        "required": true
+      },
+      {
+        "label": "Email Address",
+        "data-buildertype": "email",
+        "required": true
+      },
+      {
+        "label": "Password",
+        "data-buildertype": "password",
+        "required": true
+      },
+      {
+        "label": "Sign Up",
+        "data-buildertype": "button",
+        "required": true
+      }
+    ]
+  },
+  "test": {
+    "label": "Test",
+    "subtitle": "This is for testing",
+    "items": [
+      {
+        "key": "name",
+        "data-buildertype": "input",
+        "label": "Name",
+        "fluid": true,
+        "onChangeTimeout": 200,
+        "placeholder": "Enter your name",
+        "required": true,
+        "pattern":"^[A-Za-z -]+$",
+        "pattern-message":"Enter only alpabets"
+      },
+      {
+        "key": "age",
+        "data-buildertype": "input",
+        "type": "number",
+        "label": "age",
+        "fluid": true,
+        "onChangeTimeout": 200,
+        "placeholder": "Enter your age",
+        "min": 0,
+        "max": 100,
+        "required": true
+      },
+      {
+        "key": "dob",
+        "label": "DOB",
+        "fluid": true,
+        "onChangeTimeout": 200,
+        "placeholder": "Enter DOB",
+        "data-buildertype": "input",
+        "type": "date",
+        "size": "large",
+        "required": true,
+        "events": {
+          "onChange": {
+            "active": false,
+            "triggers": [
+              {
+                "actions": [],
+                "parameters": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ],
+                "targets": []
+              }
+            ]
+          }
+        }
+      },
+      {
+        "key": "address",
+        "data-buildertype": "textarea",
+        "label": "Address",
+        "fluid": true,
+        "placeholder": "Enter address",
+        "rows": "2",
+        "required": true,
+        "pattern":"^[A-Za-z -]+$",
+        "pattern-message":"Enter only alpabets"
+      },
+      {
+        "key": "items",
+        "data-buildertype": "dropdown",
+        "label": "Items",
+        "fluid": true,
+        "selection": true,
+        "data-elements": [
+          {
+            "value": 1,
+            "text": "Item 1"
+          },
+          {
+            "value": 2,
+            "text": "Item 2"
+          },
+          {
+            "value": 3,
+            "text": "Item 3"
+          }
+        ]
+      },
+      {
+        "key": "gender1",
+        "data-buildertype": "radiogroup",
+        "label": "Gender",
+        "data-elements": [
+          {
+            "value": 1,
+            "text": "Male"
+          },
+          {
+            "value": 2,
+            "text": "Female"
+          }
+        ]
+      },
+      {
+        "key": "Graduation",
+        "data-buildertype": "checkbox",
+        "label": "Graduation"
+      },
+      {
+        "key": "Post graduation",
+        "data-buildertype": "checkbox",
+        "label": "Post graduation"
+      },
+      {
+        "key": "submit",
+        "data-buildertype": "button",
+        "content": "Submit"
+      }
+    ]
+  }
+}
