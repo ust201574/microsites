@@ -1,0 +1,114 @@
+
+ 
+
+<div [formGroup]="group" class="page-header">
+  <!-- <mat-toolbar  *ngIf="config.name === 'default'">
+    <span>Payment Information</span>
+  </mat-toolbar> -->
+  <span class="ml-8" *ngIf="config.databuildertype === 'input'">
+    <!-- {{config?.label }} -->
+    <mat-form-field class="mt-2 ml-2" appearance="outline" floatLabel="never">
+      <mat-label> {{config?.label}} </mat-label>
+      <input matInput [type]="config?.databuildertype" [attr.placeholder]="config?.placeholder" [formControlName]="config?.name"
+        [value]="config?.value" />
+      <mat-error>
+        <div *ngFor="let err of config.errors">
+          {{err[config?.name]}}
+        </div>
+      </mat-error>
+    </mat-form-field>
+  </span>
+
+  <mat-form-field appearance="outline" floatLabel="never" *ngIf="config.type === 'number'">
+    <mat-label> {{config?.label}} </mat-label>
+      <input matInput [type]="config?.type" 
+          [attr.placeholder]="config?.placeholder"
+          [formControlName]="config?.name"
+          [value]="config?.value"
+      />
+      <mat-error>
+        <div *ngFor="let err of config.errors">
+           {{err[config?.name]}}
+        </div>
+       </mat-error>
+</mat-form-field>
+
+
+<div *ngIf="config.databuildertype === 'textarea'">
+  <mat-label class="textarea-title"> {{config?.label}} </mat-label>
+  <div class="text-area-container">
+  <mat-form-field appearance="outline" floatLabel="never" *ngIf="config?.databuildertype === 'textarea'">
+    <!-- <mat-label> {{config?.label}} </mat-label> -->
+      <textarea matInput
+          [formControlName]="config?.name"
+          [value]="config?.value"   
+      ></textarea>
+      <mat-error>
+        <div *ngFor="let err of config.errors">
+           {{err[config?.name]}}
+        </div>
+       </mat-error>
+</mat-form-field>
+</div>
+</div>
+
+<mat-form-field appearance="outline" floatLabel="never" *ngIf="config?.type === 'email'">
+  <mat-label> {{config?.label}} </mat-label>
+    <input matInput
+        [type]="config?.type"
+        [attr.placeholder]="config?.placeholder"
+        [formControlName]="config?.name"
+        [value]="config?.value"
+    />
+    <mat-error>
+      <div *ngFor="let err of config.errors">
+         {{err[config?.name]}}
+      </div>
+     </mat-error>
+</mat-form-field>
+
+<mat-form-field appearance="outline" floatLabel="never" *ngIf="config?.type === 'date'">
+  <mat-label> {{config?.label}} </mat-label>
+    <input matInput
+        [type]="config?.type"
+        [attr.placeholder]="config?.placeholder"
+        [formControlName]="config?.name"
+        [value]="config?.value"
+    />
+    <mat-error>
+      <div *ngFor="let err of config.errors">
+         {{err[config?.name]}}
+      </div>
+     </mat-error>
+</mat-form-field>
+
+<!-- <h4>Angular Radio Button Example</h4> -->
+<!-- <mat-form-field appearance="outline" floatLabel="never" *ngIf="config.type === 'radio'">
+  <mat-label> {{config?.label}} </mat-label>
+  <mat-radio-group
+  aria-labelledby="example-radio-group-label"
+  class="example-radio-group">
+  <mat-radio-button class="example-radio-button" *ngFor="let food of foods" [value]="food">
+    {{food}}
+  </mat-radio-button>
+</mat-radio-group>
+    <mat-error>
+      <div *ngFor="let err of config.errors">
+         {{err[config?.name]}}
+      </div>
+     </mat-error>
+</mat-form-field> -->
+
+<br>
+
+<!-- <div class="ml-4">
+<button mat-raised-button  style="margin-left: 40%;background-color:#d30e00; color: #fff;width: 155px;" (click)="clearFormGroup(config)">Clear</button>
+</div> -->
+
+<!-- <hr> -->
+
+</div>
+
+
+    
+  
