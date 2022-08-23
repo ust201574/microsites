@@ -1,5 +1,5 @@
 import React from "react";
-
+import '../css/styles.css'
 import { LinkContainer } from "react-router-bootstrap";
 import { Form, Input, Row, Col, FormGroup, Label, Button } from "reactstrap";
 
@@ -29,9 +29,12 @@ function MyForm(props) {
                 item["data-buildertype"] === "password") && (
                   <Col className="form-group" key={item.key}>
                     <FormGroup>
-                      <Label for="phone" className="form-label">
-                        {item.label}
-                      </Label>
+                      {item.label ? <>
+                        <Label for="phone" className="form-label">
+                          {item.label}
+                          <span className="required">&nbsp;{item.required && "*"}</span>
+                        </Label>
+                      </> : <></>}
                       <Input
                         id={item.label}
                         type={item["type"]}
@@ -41,6 +44,7 @@ function MyForm(props) {
                         required={item.required}
                         pattern={item.pattern}
                         title={item["pattern-message"]}
+                        placeholder={item.placeholder}
                       />
                     </FormGroup>
                   </Col>
@@ -64,10 +68,13 @@ function MyForm(props) {
               )}
               {item["data-buildertype"] === "textarea" && (
                 <Col className="form-group" key={item.key}>
-                  <FormGroup>
+                  <div>
                     <Label for="phone" className="form-label">
                       {item.label}
+                      <span className="required">&nbsp;{item.required && "*"}</span>
                     </Label>
+                  </div>
+                  <div>
                     <textarea
                       id={item.label}
                       type={item["type"]}
@@ -75,7 +82,7 @@ function MyForm(props) {
                       onChange={onHandleInput}
                       required={item.required}
                     />
-                  </FormGroup>
+                  </div>
                 </Col>
               )}
               {item["data-buildertype"] === "button" && (
@@ -87,36 +94,36 @@ function MyForm(props) {
               )}
               {item["data-buildertype"] === "radiogroup" && (
                 <Col className="form-group" key={item.key}>
-                  <FormGroup>
-                    {item["data-elements"].map((data, idx) => (
-                      <>
-                        <Label for="radio" className="form-label">
-                          {data.text}
-                        </Label>
-                        <input type="radio" name={data.value} value={data.text} key={idx} onChange={radioChange()} />
-                      </>
-                    ))}
-                  </FormGroup>
+                  <p className="radio-label">{item.label}</p>
+                  {item["data-elements"].map((data, idx) => (
+                    <div>
+                      <input type="radio" name={data.value} value={data.text} key={idx} onChange={radioChange()} />
+                      <Label for="radio" className="form-label">
+                        &nbsp;{data.text}
+                        <span className="required">&nbsp;{item.required && "*"}</span>
+                      </Label>
+                    </div>
+                  ))}
                 </Col>
               )}
               {item["data-buildertype"] === "checkbox" && (
                 <Col className="form-group" key={item.key}>
                   <FormGroup>
                     {console.log(item)}
-                    {/* {item["data-elements"].map((data, idx) => (
-                      <>
-                        <Label for="radio" className="form-label">
-                          {data.text}
-                        </Label>
-                        <input type="radio" name={data.value} value={data.text} key={idx} onChange={radioChange()} />
-                      </>
-                    ))} */}
-                    
-                    <input type="checkbox" id={item.label} name={item.label} value={item.label}/>
+                    <input type="checkbox" id={item.label} name={item.label} value={item.label} />
                     <Label for={item.label} className="form-label">
-                          {item.label}
-                        </Label>
+                      &nbsp;{item.label}
+                      <span className="required">&nbsp;{item.required && "*"}</span>
+                    </Label>
                   </FormGroup>
+                </Col>
+              )}
+              {item["data-buildertype"] === "label" && (
+                <Col className="form-group" key={item.key}>
+                  <Label for="radio" className="form-label">
+                    &nbsp;{item.content}
+                    <span className="required">&nbsp;{item.required && "*"}</span>
+                  </Label>
                 </Col>
               )}
             </>
