@@ -53,7 +53,7 @@ export const data = [
     "key": "SCOPE & SCALE",
     "label": "1. SCOPE & SCALE",
     "data-buildertype": "checkbox",
-     "options": "'Sustainability and production-based goals are clearly stated and relevant to the landscape/seascape in which the program is being implemented','The program is of meaningful scale to drive improvements at the landscape/seascape-level','Not Applicable'",
+     "options": "'Sustainability and production-based goals are clearly stated','The program is of meaningful scale to drive improvements at the landscape/seascape-level','Not Applicable'",
     "validators": {
       "required": true
     }

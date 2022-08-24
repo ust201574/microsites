@@ -6,13 +6,9 @@ import { FormGroup } from '@angular/forms';
   templateUrl:'form-input.component.html',
   styleUrls: ["form-input.component.scss"]
 })
-export class FormInputComponent implements OnInit {
+export class FormInputComponent{
   @Input() config: any;
   group!: FormGroup;
-
-  ngOnInit(){
- // console.log("jannnn",this.config);
-  }
 
   clearFormGroup(config: any):void {
     this.group.reset();
