@@ -7,7 +7,12 @@ const routes: Routes = [
     path: '',
     pathMatch: 'full',
     redirectTo: 'home'
-  }
+  },
+  {
+    path: 'form',
+    pathMatch: 'full',
+    redirectTo: '/form'
+  },
 ];
 
 @NgModule({

@@ -9,3 +9,6 @@ export function prefix(location, ...prefixes) {
 export function homePage(location) {
   return prefix(location, 'home')
 }
+export function formPage(location) {
+  return prefix(location, 'technology')
+}

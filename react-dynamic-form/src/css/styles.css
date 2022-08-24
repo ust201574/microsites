@@ -1,0 +1,7 @@
+.radio-label,
+.form-label {
+  font-weight: 500;
+}
+.required {
+  color: red;
+}

@@ -1,0 +1,431 @@
+{
+  "login": {
+    "label": "Login",
+    "subtitle": "This is a login form. Please enter your information.",
+    "items": [
+      {
+        "label": "Email Address",
+        "data-buildertype": "text",
+        "required": true
+      },
+      {
+        "label": "Password",
+        "data-buildertype": "text",
+        "required": true
+      },
+      {
+        "label": "Create account",
+        "data-buildertype": "link",
+        "to": "/register",
+        "required": true
+      },
+      {
+        "label": "Login",
+        "data-buildertype": "button",
+        "required": true
+      }
+    ]
+  },
+  "register": {
+    "label": "Register",
+    "subtitle": "This is a registration form. Please enter your information.",
+    "items": [
+      {
+        "label": "First Name",
+        "data-buildertype": "text",
+        "required": true
+      },
+      {
+        "label": "Last Name",
+        "data-buildertype": "text",
+        "required": true
+      },
+      {
+        "label": "Email Address",
+        "data-buildertype": "email",
+        "required": true
+      },
+      {
+        "label": "Password",
+        "data-buildertype": "password",
+        "required": true
+      },
+      {
+        "label": "Sign Up",
+        "data-buildertype": "button",
+        "required": true
+      }
+    ]
+  },
+  "test": {
+    "label": "Test",
+    "subtitle": "This is for testing",
+    "items": [
+      {
+        "key": "name",
+        "data-buildertype": "input",
+        "label": "Name",
+        "fluid": true,
+        "onChangeTimeout": 200,
+        "placeholder": "Enter your name",
+        "required": true,
+        "pattern": "^[A-Za-z -]+$",
+        "pattern-message": "Enter only alpabets"
+      },
+      {
+        "key": "age",
+        "data-buildertype": "input",
+        "type": "number",
+        "label": "age",
+        "fluid": true,
+        "onChangeTimeout": 200,
+        "placeholder": "Enter your age",
+        "min": 0,
+        "max": 100,
+        "required": true
+      },
+      {
+        "key": "dob",
+        "label": "DOB",
+        "fluid": true,
+        "onChangeTimeout": 200,
+        "placeholder": "Enter DOB",
+        "data-buildertype": "input",
+        "type": "date",
+        "size": "large",
+        "required": true,
+        "events": {
+          "onChange": {
+            "active": false,
+            "triggers": [
+              {
+                "actions": [],
+                "parameters": [
+                  {
+                    "name": "",
+                    "value": ""
+                  }
+                ],
+                "targets": []
+              }
+            ]
+          }
+        }
+      },
+      {
+        "key": "address",
+        "data-buildertype": "textarea",
+        "label": "Address",
+        "fluid": true,
+        "placeholder": "Enter address",
+        "rows": "2",
+        "required": true,
+        "pattern": "^[A-Za-z -]+$",
+        "pattern-message": "Enter only alpabets"
+      },
+      {
+        "key": "items",
+        "data-buildertype": "dropdown",
+        "label": "Items",
+        "fluid": true,
+        "selection": true,
+        "data-elements": [
+          {
+            "value": 1,
+            "text": "Item 1"
+          },
+          {
+            "value": 2,
+            "text": "Item 2"
+          },
+          {
+            "value": 3,
+            "text": "Item 3"
+          }
+        ]
+      },
+      {
+        "key": "gender1",
+        "data-buildertype": "radiogroup",
+        "label": "Gender",
+        "data-elements": [
+          {
+            "value": 1,
+            "text": "Male"
+          },
+          {
+            "value": 2,
+            "text": "Female"
+          }
+        ]
+      },
+      {
+        "key": "Graduation",
+        "data-buildertype": "checkbox",
+        "label": "Graduation"
+      },
+      {
+        "key": "Post graduation",
+        "data-buildertype": "checkbox",
+        "label": "Post graduation"
+      },
+      {
+        "key": "submit",
+        "data-buildertype": "button",
+        "content": "Submit"
+      }
+    ]
+  },
+  "sample": {
+    "label": "Circular Connector",
+    "subtitle": "Walmart is focused on packaging innovations that are designed to help us achieve our zero plastic waste aspiration. If you are an organization that produces sustainable packaging or produce ingredients that can be used in sustainable packaging and would like to share your innovation with Walmart, please submit the project information through the Circular Connector form. Packaging initiatives that align with Walmart’s sustainable packaging goals will be made available to the general public for download on walmartsustainabilityhub.com and shared with Walmart merchants and private brand suppliers for their consideration. Walmart merchants and private brand suppliers interested in learning more will reach out directly to the contact listed in the Circular Connector submission form.",
+    "items": [
+      {
+        "key": "Company name",
+        "data-buildertype": "input",
+        "label": "Company name",
+        "fluid": true,
+        "onChangeTimeout": 200,
+        "placeholder": "Company name",
+        "required": true
+      },
+      {
+        "key": "sample label",
+        "data-buildertype": "label",
+        "content": "1) Is your packaging primarily made of paper, plastic, metal or glass?",
+        "required": true
+      },
+      {
+        "key": "gender1",
+        "data-buildertype": "radiogroup",
+        "data-elements": [
+          {
+            "value": 1,
+            "text": "Paper"
+          },
+          {
+            "value": 2,
+            "text": "Plastic"
+          },
+          {
+            "value": 3,
+            "text": "Metal"
+          },
+          {
+            "value": 4,
+            "text": "Glass"
+          },
+          {
+            "value": 5,
+            "text": "Other"
+          }
+        ]
+      },
+      {
+        "key": "sample label",
+        "data-buildertype": "label",
+        "content": "2) Has your packaging been assessed by How2Recycle?",
+        "required": true
+      },
+      {
+        "key": "gender1",
+        "data-buildertype": "radiogroup",
+        "data-elements": [
+          {
+            "value": 1,
+            "text": "Yes (USA/Canada)"
+          },
+          {
+            "value": 2,
+            "text": "No (USA/Canada)"
+          },
+          {
+            "value": 3,
+            "text": "No, How2Recycle is not available (International Markets)"
+          }
+        ]
+      },
+      {
+        "key": "sample label",
+        "data-buildertype": "label",
+        "content": "3) What packaging format best describes your innovation?",
+        "required": true
+      },
+      {
+        "key": "gender1",
+        "data-buildertype": "radiogroup",
+        "data-elements": [
+          {
+            "value": 1,
+            "text": "Bag/Film/Pouch/Sachet"
+          },
+          {
+            "value": 2,
+            "text": "Blister Pack"
+          },
+          {
+            "value": 3,
+            "text": "Bottle/Jug"
+          },
+          {
+            "value": 4,
+            "text": "Box"
+          },
+          {
+            "value": 5,
+            "text": "Cans/Canisters/Cartons"
+          },
+          {
+            "value": 6,
+            "text": "Foam Cushion, Dunnage, Inserts, Sleeves"
+          },
+          {
+            "value": 7,
+            "text": "Hang Tag/Header Cards/Backer Cards"
+          },
+          {
+            "value": 8,
+            "text": "Jars/Tubs/Cups/Pails"
+          },
+          {
+            "value": 9,
+            "text": "Small packaging"
+          },
+          {
+            "value": 10,
+            "text": "Tray/Clamshells/Thermoforms"
+          },
+          {
+            "value": 11,
+            "text": "Tubes"
+          }
+        ]
+      },
+      {
+        "key": "sample label",
+        "data-buildertype": "label",
+        "content": "4) Do you use inner packaging materials?",
+        "required": true
+      },
+      {
+        "key": "gender1",
+        "data-buildertype": "radiogroup",
+        "data-elements": [
+          {
+            "value": 1,
+            "text": "Yes"
+          },
+          {
+            "value": 2,
+            "text": "No"
+          }
+        ]
+      },
+      {
+        "key": "sample label",
+        "data-buildertype": "label",
+        "content": "5) What are the Sustainable Packaging Attributes for your packaging? (Check as many as are applicable)",
+        "required": true
+      },
+      {
+        "key": "gender1",
+        "data-buildertype": "checkbox",
+        "label": "Meets Walmart's Recycling Playbook Recyclable Green Pages(s)"
+      },
+      {
+        "key": "gender1",
+        "data-buildertype": "checkbox",
+        "label": "BPI Certified Compostable"
+      },
+      {
+        "key": "gender1",
+        "data-buildertype": "checkbox",
+        "label": "Identified by How2Recycle as Optimally Recyclable"
+      },
+      {
+        "key": "gender1",
+        "data-buildertype": "checkbox",
+        "label": "Free from intentionally added Priority Chemicals (as identified by Environmental Defence Fund)"
+      },
+      {
+        "key": "gender1",
+        "data-buildertype": "checkbox",
+        "label": "FSC Certified virgin fiber"
+      },
+      {
+        "key": "name",
+        "data-buildertype": "textarea",
+        "label": "9) Briefly describe your packaging solution. (350 words or less)",
+        "fluid": true,
+        "onChangeTimeout": 200,
+        "placeholder": "9) Briefly describe your packaging solution. (350 words or less)*",
+        "required": true,
+        "pattern": "^[A-Za-z -]+$",
+        "pattern-message": "Enter only alpabets"
+      },
+      {
+        "key": "name",
+        "data-buildertype": "input",
+        "label": "10) Provide the link to a picture of your packaging solution.",
+        "fluid": true,
+        "onChangeTimeout": 200,
+        "placeholder": "10) Provide the link to a picture of your packaging solution.",
+        "required": true,
+        "pattern": "^[A-Za-z -]+$",
+        "pattern-message": "Enter only alpabets"
+      },
+      {
+        "key": "sample label",
+        "data-buildertype": "label",
+        "content": "15) Contact information",
+        "required": true
+      },
+      {
+        "key": "name",
+        "data-buildertype": "input",
+        "label": "",
+        "fluid": true,
+        "onChangeTimeout": 200,
+        "placeholder": "First Name *",
+        "required": true
+      },
+      {
+        "key": "name",
+        "data-buildertype": "input",
+        "label": "",
+        "fluid": true,
+        "onChangeTimeout": 200,
+        "placeholder": "Last Name *",
+        "required": true
+      },
+      {
+        "key": "name",
+        "data-buildertype": "input",
+        "label": "",
+        "fluid": true,
+        "onChangeTimeout": 200,
+        "placeholder": "Email address *",
+        "required": true
+      },
+      {
+        "key": "name",
+        "data-buildertype": "input",
+        "label": "",
+        "fluid": true,
+        "onChangeTimeout": 200,
+        "placeholder": "Phone number *",
+        "required": true
+      },
+      {
+        "key": "sample label",
+        "data-buildertype": "checkbox",
+        "label": "I agree"
+      },
+      {
+        "key": "Submit",
+        "data-buildertype": "button",
+        "content": "Submit"
+      }
+    ]
+  }
+}
