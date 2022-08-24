@@ -1,0 +1,25 @@
+
+.textarea-title {
+   display:block;
+   margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.text-area-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mat-form-field {
+    width: 62%;
+}
+
+.mat-form-field-wrapper {
+    width: 62%;
+}
+
+.text-area-container .mat-form-field {
+    width: 90%;
+}
