@@ -1,0 +1,41 @@
+.flex-horzontial {
+    display: flex;
+  }
+
+  mat-checkbox {
+    margin-bottom: 8px;
+    font-family: Bogle,Roboto,sans-serif!important;
+  }
+
+  .mat-checkbox-layout {
+    padding-left: 12px;
+  }
+
+  .mat-checkbox-layout .mat-checkbox-label {
+    line-height: 24px;
+}
+
+.survey-question-title {
+  margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.innovations-survey-inputs {
+  padding-left: 12px;
+}
+  
+.survey-question-title .required-symbol {
+  color: red;
+  margin-left: 5px;
+}
+
+.innovations-survey-question-section {
+  margin-bottom: 15px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
