@@ -10,9 +10,10 @@ import { data } from './data';
 export class AppComponent implements OnInit {
   detailsForm: any = data;
   ngOnInit(): void {
+    console.log("testttt",this.detailsForm);
     this.detailsForm.forEach((elmt: any)=>{
       elmt["databuildertype"] = elmt["data-buildertype"];
-      delete elmt["data-buildertype"];
+     // delete elmt["data-buildertype"];
       if (elmt["databuildertype"] === "checkbox") {
         let regex = /"/g;
         let options = elmt["options"].replace(regex, " ");
@@ -21,8 +22,6 @@ export class AppComponent implements OnInit {
 
         const chars = options.split(',');
 elmt["options"] = chars;
-        if (options.includes("\"[")) {
-        }
       }
     })
   }
