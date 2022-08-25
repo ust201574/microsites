@@ -40,8 +40,6 @@ export class DynamicFieldDirective implements Field, OnChanges, OnInit {
 
 
   ngOnInit() {
-    console.log("ng on init",this.config,"test",components[this.config.databuildertype]);
-
     if (!components[this.config.databuildertype]) {
       const supportedTypes = Object.keys(components).join(', ');
       throw new Error(
